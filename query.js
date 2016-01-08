@@ -4,7 +4,8 @@ var app = express();
 
 app.get('/', function (req, res) {
     Msg.find({}, function (err, docs) {
-        var parsedJSON = JSON.parse(docs);
+        var arr = JSON.stringify(docs);
+        var parsedJSON = JSON.parse(arr);
         for (var i=0;i<parsedJSON.length;i++) {
             console.log(parsedJSON[i]);
         //    res.send(parsedJSON[i].message);
