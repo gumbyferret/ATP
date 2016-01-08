@@ -4,10 +4,11 @@ var app = express();
 
 app.get('/', function (req, res) {
     Msg.find({}, function (err, docs) {
-        //var parsedJSON = JSON.parse(docs);
-        //for (var i=0;i<parsedJSON.length;i++) {
+        var parsedJSON = JSON.parse(docs);
+        for (var i=0;i<parsedJSON.length;i++) {
+            console.log(parsedJSON[i]);
         //    res.send(parsedJSON[i].message);
-        //} 
+        } 
         res.json(docs);
     });
 });
