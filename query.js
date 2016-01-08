@@ -6,12 +6,13 @@ app.get('/', function (req, res) {
     Msg.find({}, function (err, docs) {
         var arr = JSON.stringify(docs);
         var parsedJSON = JSON.parse(arr);
+        var displayme = ' ';
         for (var i=0;i<parsedJSON.length;i++) {
             console.log(parsedJSON[i].message);
             var htmlme = '<p>' + parsedJSON[i].message + '</p>'
-            var displayme += htmlme;
-            res.send(displayme);
+            displayme = displayme + htmlme;
         } 
+        res.send(displayme);
         //res.docs(docs);
     });
 });
