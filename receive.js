@@ -21,7 +21,7 @@ http.createServer(function (req, res) {
     var jsonDataObject = JSON.parse(jsonString);
     
     // create a new message
-    var newMsg = Messages({
+    var newMsg = Msg({
       name: jsonDataObject.From,
       message: jsonDataObject.Body,
       delete_flag: false
