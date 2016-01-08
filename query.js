@@ -7,7 +7,7 @@ app.get('/', function (req, res) {
         var arr = JSON.stringify(docs);
         var parsedJSON = JSON.parse(arr);
         for (var i=0;i<parsedJSON.length;i++) {
-            console.log(parsedJSON[i]);
+            console.log(parsedJSON[i].message);
         //    res.send(parsedJSON[i].message);
         } 
         res.json(docs);
