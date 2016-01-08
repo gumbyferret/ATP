@@ -34,7 +34,7 @@ msgSchema.pre('save', function(next) {
 });
 
 
-var User = mongoose.model('Message', msgSchema);
+var Messages = mongoose.model('Message', msgSchema);
 
 // make this available to our users in our Node applications
 
