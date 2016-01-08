@@ -1,4 +1,4 @@
-var app = express();
+var app = require('express');
 var Msg = require('./message');
 
 app.get('/', function (req, res) {
