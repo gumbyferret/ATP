@@ -4,7 +4,13 @@ var app = express();
 
 app.get('/', function (req, res) {
     Msg.find({}, function (err, docs) {
-        res.json(docs);
+        function myFunction(dataFromServer){
+            var parsedJSON = JSON.parse(dataFromServer.d);
+            for (var i=0;i<parsedJSON.length;i++) {
+                res.send(parsedJSON[i].Id);
+            }
+        }
+        // res.json(docs);
     });
 });
 
