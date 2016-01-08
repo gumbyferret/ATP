@@ -3,10 +3,6 @@ var Msg = require('./message');
 var app = express();
 
 app.get('/', function (req, res) {
-    res.send("<a href='/msg'>Show Messages</a>");
-});
-
-app.get('/msg', function (req, res) {
     Msg.find({}, function (err, docs) {
         res.json(docs);
     });
