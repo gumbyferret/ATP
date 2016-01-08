@@ -8,7 +8,7 @@ app.get('/', function (req, res) {
         var parsedJSON = JSON.parse(arr);
         for (var i=0;i<parsedJSON.length;i++) {
             console.log(parsedJSON[i].message);
-            res.send('<h2>'+parsedJSON[i].message+</h2>);
+            res.send('<h2>'+parsedJSON[i].message+'</h2>');
         } 
         //res.docs(docs);
     });
