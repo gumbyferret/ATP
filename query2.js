@@ -35,10 +35,10 @@ app.get('/', function (req, res) {
         var displayme = '<h1>Message Dashboard</h1>';
         for (var i=0;i<parsedJSON.length;i++) {
             console.log(parsedJSON[i].message);
-            if (parsedJSON[i].delete_flag =='PHONE') {
-               var htmlme = '<p>' + parsedJSON[i].delete_flag + ': ' + parsedJSON[i].message + '</p>';
-            } else {
+            if (parsedJSON[i].delete_flag =='WEB') {
                var htmlme = '<p>' + parsedJSON[i].delete_flag + ': ' + parsedJSON[i].message + ' from: <bold>'+ parsedJSON[i].name + '</bold></p>';
+            } else {
+               var htmlme = '<p>' + parsedJSON[i].delete_flag + ': ' + parsedJSON[i].message + '</p>';
             }
             displayme = displayme + htmlme;
         } 
