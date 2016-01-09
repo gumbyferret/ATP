@@ -13,6 +13,17 @@ app.get('/process_get', function (req, res) {
        name:req.query.name,
        message:req.query.message
    };
+   var newMsg = Msg({
+      name: req.query.name,
+      message: req.query.message,
+      delete_flag: false
+    });
+
+    // save the message
+    newMsg.save(function(err) {
+      if (err) throw err;
+      console.log('Msg created!');
+    });
    console.log(response);
    res.end(JSON.stringify(response));
 });
