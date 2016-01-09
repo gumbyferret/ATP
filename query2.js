@@ -16,7 +16,7 @@ app.get('/process_get', function (req, res) {
    var newMsg = Msg({
       name: req.query.name,
       message: req.query.message,
-      delete_flag: false
+      delete_flag: 'WEB'
     });
 
     // save the message
@@ -25,17 +25,17 @@ app.get('/process_get', function (req, res) {
       console.log('Msg created!');
     });
    console.log(response);
-   res.end(JSON.stringify(response));
+   res.end('Thank you for your message');
 });
 
 app.get('/', function (req, res) {
     Msg.find({}, function (err, docs) {
         var arr = JSON.stringify(docs);
         var parsedJSON = JSON.parse(arr);
-        var displayme = ' ';
+        var displayme = '<h1>Message Dashboard</h1>';
         for (var i=0;i<parsedJSON.length;i++) {
             console.log(parsedJSON[i].message);
-            var htmlme = '<p>' + parsedJSON[i].message + '</p>'
+            var htmlme = '<p>' + parseJSON[i].delete_flag + ': ' + parsedJSON[i].message + '</p>'
             displayme = displayme + htmlme;
         } 
         res.send(displayme);
