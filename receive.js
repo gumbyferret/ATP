@@ -24,7 +24,7 @@ http.createServer(function (req, res) {
     var newMsg = Msg({
       name: jsonDataObject.From,
       message: jsonDataObject.Body,
-      delete_flag: false
+      delete_flag: 'PHONE'
     });
 
     // save the message
