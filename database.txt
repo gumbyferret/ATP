@@ -1,0 +1,9 @@
+To drop the database do the following:
+
+At command prompt:
+
+mongo
+use incoming
+db.dropDatabase()
+exit
+
