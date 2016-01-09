@@ -36,9 +36,9 @@ app.get('/', function (req, res) {
         for (var i=0;i<parsedJSON.length;i++) {
             console.log(parsedJSON[i].message);
             if (parsedJSON[i]=='PHONE') {
-               var htmlme = '<p>' + parseJSON[i].delete_flag + ': ' + parsedJSON[i].message + '</p>';
+               var htmlme = '<p>' + parsedJSON[i].delete_flag + ': ' + parsedJSON[i].message + '</p>';
             } else {
-               var htmlme = '<p>' + parseJSON[i].delete_flag + ': ' + parsedJSON[i].message + ' from:'+ parsedJSON[i].name + '</p>';
+               var htmlme = '<p>' + parsedJSON[i].delete_flag + ': ' + parsedJSON[i].message + ' from:'+ parsedJSON[i].name + '</p>';
             }
             displayme = displayme + htmlme;
         } 
