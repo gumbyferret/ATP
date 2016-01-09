@@ -17,7 +17,7 @@ var msgSchema = new Schema({
   name: String,
   message: String,
   created_at: Date,
-  delete_flag: Boolean
+  delete_flag: String
 });
 
 // Run a function before saving
