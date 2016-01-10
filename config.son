@@ -1,0 +1,15 @@
+{
+    "name": "AskThePanel UK",
+    "email": "email@gmail.com",
+    "username": "email",
+    "password": "<password>",
+    "imap": {
+        "host": "imap.gmail.com",
+        "port": 993,
+        "secure": true
+    },
+    "smtp": {
+        "host": "smtp.gmail.com",
+        "ssl": true
+    }
+}
