@@ -2,6 +2,7 @@ var notifier = require('mail-notifier')
 // var Msg = require('./message')
 var fs = require('fs')
 var stream = require('stream');
+var Msg = require('./message');
 
 var filename = __dirname + "/config.json";
 var config = JSON.parse (fs.readFileSync(filename,'utf8'));
